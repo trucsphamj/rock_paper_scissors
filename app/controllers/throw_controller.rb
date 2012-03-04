@@ -5,14 +5,13 @@ class ThrowController < ApplicationController
   end
 
   def rock
-    if (@computer_throw == :paper)
+    if (@computer_throw == :rock)
       
-    elsif (@computer_throw == @defeat[:paper])
+    elsif (@computer_throw == @defeat[:rock])
       $results[:player] += 1
     else
       $results[:computer] += 1
     end
-    #render :nothing => true
   end
 
   def paper
@@ -34,7 +33,14 @@ class ThrowController < ApplicationController
     else
       $results[:computer] += 1
     end
+  end
 
+  def results   
+  end
+
+  def other
+    @other = params[:other]
+    render :error
   end
 
  end
