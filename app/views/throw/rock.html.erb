@@ -1,0 +1,10 @@
+<p><% if @computer_throw == :rock %>
+        <h4>You tied with the computer. Try again!</h4>
+   <% elsif @computer_throw == @defeat[:rock]%>
+        <h4>Nicely done; rock beats <%= @computer_throw%>!</h4>
+   <% else %>
+        <h4>Ouch; <%= @computer_throw%> beats rock. Better luck next time!</h4><br/>
+   <% end %>
+    <a href = http://localhost:3000/>Back</a>
+</p>
+ 
