@@ -8,6 +8,10 @@ RockPaperScissors::Application.routes.draw do
 
   get "throw/index"
 
+  match "throw" => "throw#index"
+
+  match "throw/" => "throw#index"
+
     
   # The priority is based upon order of creation:
   # first created -> highest priority.
