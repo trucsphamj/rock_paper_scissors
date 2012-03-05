@@ -1,4 +1,4 @@
-class ThrowController < ApplicationController
+class ThrowController < ApplicationController    
 
   def index
     render :intro
@@ -8,16 +8,16 @@ class ThrowController < ApplicationController
     if (@computer_throw == :rock)
       
     elsif (@computer_throw == @defeat[:rock])
-      $results[:player] += 1
+      #$results[:player] += 1
     else
-      $results[:computer] += 1
+      #$results[:computer] += 1
     end
   end
 
   def paper
     if (@computer_throw == :paper)
       
-   elsif (@computer_throw == @defeat[:paper])
+    elsif (@computer_throw == @defeat[:paper])
       $results[:player] += 1
     else
       $results[:computer] += 1

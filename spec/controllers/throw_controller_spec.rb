@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe ThrowController do
+  render_views
 
   describe "GET 'rock'" do
     it "should be successful" do
@@ -8,6 +9,7 @@ describe ThrowController do
       response.should be_success
     end
   end
+
 
   describe "GET 'paper'" do
     it "should be successful" do
