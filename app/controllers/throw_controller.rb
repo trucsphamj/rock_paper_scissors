@@ -8,9 +8,9 @@ class ThrowController < ApplicationController
     if (@computer_throw == :rock)
       
     elsif (@computer_throw == @defeat[:rock])
-      #$results[:player] += 1
+      $results[:player] += 1
     else
-      #$results[:computer] += 1
+      $results[:computer] += 1
     end
   end
 
