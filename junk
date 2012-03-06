@@ -1,0 +1,39 @@
+ 
+
+  get "throw/rock"
+
+  get "throw/paper"
+
+  get "throw/scissors"
+
+  get "throw/index"
+
+  match "throw" => "throw#index"
+
+  match "throw/" => "throw#index"
+
+  match "stats" => "throw#results"
+
+  match "throw/:other" => "throw#other"
+
+
+  def rock
+    if (@computer_throw == :rock)
+      
+    elsif (@computer_throw == @defeat[:rock])
+      #$results[:player] += 1
+    else
+      #$results[:computer] += 1
+    end
+  end
+
+  def paper
+    if (@computer_throw == :paper)
+      
+    elsif (@computer_throw == @defeat[:paper])
+      $results[:player] += 1
+    else
+      $results[:computer] += 1
+    end
+
+  end
